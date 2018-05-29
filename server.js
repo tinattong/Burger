@@ -1,26 +1,25 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const exphbs = require("express-handlebars");
+var express = require('express');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var exphbs = require('express-handlebars');
+var routes = require('./controller/burger_controller.js');
 
-const planRoutes = require('./controllers/plansController.js')
+var PORT = process.env.PORT || 8080;
+var app = express();
 
-const app = express();
-const port = 3000;
+app.use(express.static("public"));
 
-// Parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
+
 app.use(bodyParser.json());
 
-// handlerbars engine setup
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+
 app.set("view engine", "handlebars");
 
-// serves up static assets
-app.use(express.static('public'));
+app.use(routes);
 
-// include the plan routes from the controller
-app.use(planRoutes);
-
-app.listen(port, function() {
-  console.log("listening on port", port);
+app.listen(PORT, function(){
+    console.log("App now listening at localhost:" + PORT);
 });

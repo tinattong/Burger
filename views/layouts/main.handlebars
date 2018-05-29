@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Bob's Burgers</title>
+    <!-- Bootstrap CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/burgers.js"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="/assets/img/burger.jpg">
+            </div>
+        </div>
+        {{{ body }}}
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="title">
+                            <strong>
+                                Add a Burger!
+                            </strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <input type="text" id="burger_name" class="form-control">
+                        <br>
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-md" id="create-burger">
+                                <span class="glyphicon glyphicon-plus-sign"></span>
+                                Add burger to the menu!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="https://github.com/tinattong/Burger">Github</a>
+        </div>
+    </div>
+</body>
+
+</html>

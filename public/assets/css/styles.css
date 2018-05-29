@@ -1,0 +1,37 @@
+
+
+body {
+    background-color: yellow;
+}
+
+.panel{
+    background-color: red;
+}
+
+.change-devoured, .delete-burger {
+
+    background-color: red;
+    color: white;
+
+}
+
+h1 {
+    background-color: red;
+    color: white;
+    border: 5px solid white;
+
+}
+
+#section-title {
+    background-color: red;
+    color: white;
+    border: 5px solid white;
+    width: 50%;
+    margin-left: 25%
+}
+
+img {
+    height: 25%;
+    width: 25%;
+    margin-left: 40%
+}
